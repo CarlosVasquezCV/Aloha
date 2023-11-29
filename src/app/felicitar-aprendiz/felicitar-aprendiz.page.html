@@ -1,0 +1,143 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>IUMACO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- TITULO FELICITAR APRENDIZ -->
+
+  <div class="title">
+    <h1>Felicitar Aprendiz</h1>
+  </div>
+
+  <!-- FORMULARIO, BOTONES -->
+
+  
+
+    <div class="drawers">
+  
+      <div class="button-drawer">
+        <button>Botón 1</button>
+        <button>Botón 2</button>
+        <button>Botón 3</button>
+      </div>
+  
+      <div class="form-drawer">
+
+        <form method="POST" class="formulario">
+    
+          <div class="formulario-izquierdo">
+          <ion-item>
+            <ion-label for="fichas">Fichas:</ion-label>
+            <ion-select [(ngModel)]="fichaSeleccionada" name="fichaSeleccionada" (ionChange)="filtrarDestinatarios()">
+              <ion-select-option *ngFor="let ficha of fichasUnicas" [value]="ficha">{{ ficha }}</ion-select-option>
+            </ion-select>
+          </ion-item><br>
+          
+          <ion-item>
+            <ion-label for="destinatario">Aprendices como destinatario:</ion-label>
+            <ion-select id="destinatario" [(ngModel)]="destinatario" name="destinatario" multiple="false" (ionChange)="informacionAprendiz()">
+              <ion-select-option *ngFor="let destinatario of destinatarios" [value]="destinatario.email">{{ destinatario }}</ion-select-option>
+            </ion-select>
+          </ion-item><br>
+        </div>
+  
+        <div class="formulario-derecho">
+          <ion-item>
+            <ion-label position="floating">Nota:</ion-label>
+            <ion-textarea [(ngModel)]="nota" id="nota" name="nota" rows="4" cols="30"></ion-textarea>
+          </ion-item><br><br>   
+        </div>     
+  
+          <input type="submit" value="Enviar" (click)="enviarCorreo()">
+        </form>
+        
+        
+      </div>
+  
+    </div>
+  
+  
+
+  
+    
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------
+
+
+<ion-header class="pop" [translucent]="false">
+  <ion-toolbar class="pop" >
+    <ion-item id="header" class="pop">
+      <h3> IUMACO </h3> 
+      <div id="logo"><img src="../../assets/sena.png" class="logo"></div>
+      <div class="custom-button" slot="end">
+        <ion-button fill="clear"  class="botonsesion"  (click)="volver()">Volver</ion-button>
+        <ion-button fill="clear" class="botonsesion"   (click)="confirmarSalida()">Cerrar sesión</ion-button>
+      </div>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="centered-container">
+  <h2>Formulario de Felicitación</h2>
+  <div id="formulario">
+    <div id="formularioFelicitar">
+      
+      <form action="enviar.php" method="POST">
+
+        <ion-item class="cuadro">
+          <ion-label for="fichas">Fichas:</ion-label>
+          <ion-select id="fichas" [(ngModel)]="fichaSeleccionada" name="fichaSeleccionada" (ionChange)="filtrarDestinatarios()">
+            <ion-select-option *ngFor="let ficha of fichasUnicas" [value]="ficha">{{ ficha }}</ion-select-option>
+          </ion-select>
+        </ion-item><br>
+        
+        <ion-item class="cuadro">
+          <ion-label for="destinatario">Aprendices como destinatario:</ion-label>
+          <ion-select id="destinatario" [(ngModel)]="destinatario" name="destinatario" multiple="false" (ionChange)="informacionAprendiz()">
+            <ion-select-option *ngFor="let destinatario of destinatarios" [value]="destinatario.email">{{ destinatario }}</ion-select-option>
+          </ion-select>
+        </ion-item><br>
+
+        <ion-item class="cuadro">
+          <ion-label position="floating">Nota:</ion-label>
+          <ion-textarea [(ngModel)]="nota" id="nota" name="nota" rows="4" cols="30"></ion-textarea>
+        </ion-item><br><br>        
+
+        <input type="submit" value="Enviar" (click)="enviarCorreo()">
+      </form>
+    </div>
+  </div>
+
+  <pre>
+    newEmail: {{this.newEmail}}
+  </pre>
+  <img class="este" src="../../assets/icon/Captura-fondo-sena.png">
+
+
+
+  ----------------------->

@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-img slot="start" src="assets/img/logo.png"></ion-img>
+
+    <ion-title>IUMACO</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="confirmarSalida()">
+        <img id="imagenes" src="../../assets/cerrar-sesion.png">
+        <h3>cerrar sesión</h3>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+  <ion-content class="ion-padding">
+<!-------------------- CONTENIDO --------------------->
+
+<!--instuctor-->
+<div class="title">
+  <h1>INSTRUCTOR</h1>
+</div>
+
+
+<br><br>
+
+
+
+<div class="card-container">
+
+  <div class="card" (click)="felicitarAprendiz()">
+    <img class="imagen-hover" src="../../assets/insignia.png">
+    <h2>Título Tarjeta 1</h2>
+    <p>Descripción tarjeta 1</p>
+  </div>
+
+  <div class="card" (click)="felicitarAprendiz()">
+    <img src="../../assets/perfil.png">
+    <h2>Título Tarjeta 2</h2>
+    <p>Descripción tarjeta 2</p>
+  </div>
+
+  <div class="card" (click)="llamadoAtencion()">
+    <img src="../../assets/perfil.png">
+    <h2>Título Tarjeta 3</h2>
+    <p>Descripción tarjeta 3</p>
+  </div>
+
+</div>
+
+</ion-content>
+
+
+
+
+<!--
+  
+<ion-header class="pop" [translucent]="false">
+  <ion-toolbar class="pop" >
+    <ion-item id="header" class="pop">
+      <h3> IUMACO </h3> 
+      <div id="logo"><img src="../../assets/sena.png" class="logo"></div>
+      <div class="custom-button" slot="end">
+        <ion-button fill="clear" class="botonsesion"  (click)="confirmarSalida()">Cerrar sesión</ion-button>
+      </div>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="jiji">
+  <ion-title>INSTRUCTOR</ion-title>
+  <ion-row>
+    <ion-col size="4">
+      <ion-card class="uno" (click)="felicitarAprendiz()" >
+        <ion-card-header>
+          <ion-icon  name="ribbon-outline" id="icon1"></ion-icon>
+        </ion-card-header>
+        <ion-card-content>
+          Felicitaciones 
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card class="two" (click)="llamadoAtencion()" >
+        <ion-card-header>
+          <ion-icon name="thumbs-down-outline" id="icon2"></ion-icon>
+        </ion-card-header>
+        <ion-card-content>
+          Llamado de Atencion 
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card class="tre" (click)="citacionComite()">
+        <ion-card-header>
+          <ion-icon name="reader-outline" id="icon3"></ion-icon>
+        </ion-card-header>
+        <ion-card-content>
+          Solicitud para comite
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <img class="este" src="../../assets/icon/Captura-fondo-sena.png">
+</ion-content>
+
+-->

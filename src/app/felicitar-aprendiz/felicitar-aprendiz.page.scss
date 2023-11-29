@@ -1,0 +1,285 @@
+ion-toolbar {
+  --background:  rgb(56, 169, 0); 
+}
+
+ion-content {
+  --background: #dddddd;
+
+}
+
+
+/*----------------- titulo aprendiz ----------------*/
+.title {
+  text-align: center; 
+  padding: 10px;
+}
+
+h1 {
+  font-family: 'Arial';
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;  
+  color: #556B2F;
+  text-shadow: 1px 1px 0px #999;  
+}
+
+/*---------- FORMULARIO Y BOTONES -----------*/
+
+
+.drawers {
+  display: flex; 
+}
+
+.button-drawer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #dddddd;
+  width: 30%;
+  margin-left: 20px;
+  
+
+   
+}
+
+.button-drawer button {
+  margin: 10px;  
+  height: 50px;
+  width: 350px;
+  font-size: 32px;
+  color: #696969;
+  background-color: white;
+  border-radius: 20px;
+  
+  border: 3px solid rgb(57, 169, 0); 
+
+
+}
+
+.button-drawer button:hover {
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 16px rgb(2, 2, 2); 
+  background-color: rgb(56, 169, 0);
+  cursor: pointer;
+}
+
+.form-drawer {
+  padding: 10px; 
+  background-color: #dddddd;
+  width: 70%;
+  margin-right: 20px;
+
+   
+  
+}
+
+.form-drawer ion-label{
+  font-size: 20px;
+
+}
+
+@media (max-width: 576px) {
+
+  .drawers {
+    flex-direction: column;
+  }
+  
+  .form-drawer { 
+    margin-top: 20px;
+    width: 100%;
+    margin-right: 0px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .button-drawer {
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    margin-left: 0px;
+    
+  }
+  
+  .button-drawer button {
+    flex: 1;
+    height: 40px;
+    font-size: 30px;
+    margin: 4px;
+  }  
+}
+
+//----Formulario
+
+.formulario {
+  background: rgb(57, 169, 0);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+  border: 3px solid rgb(57, 169, 0); 
+
+}
+
+.formulario ion-item {
+  --background: #fff;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  border-radius: 5px;
+  --highlight-height: 0;
+}
+
+.formulario ion-select{
+  max-width: 100%;  
+}
+
+.formulario ion-textarea {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.formulario input[type="submit"] {
+  width: 100%;
+  background: #007aff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.formulario input[type="submit"]:hover {
+  background: white;  
+}
+
+/*  izquierdo y derecho */
+
+.formulario-izquierdo{
+  float: left;
+  width: 40%;
+}
+
+.formulario-derecho{
+  float: left;
+  margin-left: 10px;
+  width: 58%;
+
+}
+
+@media (max-width: 576px) {
+  .formulario-izquierdo{
+    width: 100%;
+  }
+  
+  .formulario-derecho{
+    width: 100%;
+    margin-left: 0px
+  
+  }
+}
+
+
+
+/*
+//encabezado
+.pop{
+  --background: rgb(57, 169, 0);
+  
+}
+h1{
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  margin-top: -400px;
+
+}
+h3{
+  margin-left: 20px;
+  font-size: 22px;
+ color:#FFFFFF
+}
+.logo{
+  height: 70px;
+  padding-left: 690px;
+  
+}
+.botonsesion{
+  --color:#ffffff;
+  height: 40px;
+  border-radius: 10px;
+}
+.botonsesion:hover{
+  --color:#ffffff;
+  background-color: red;
+}
+//cuerpo
+.centered-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+}
+
+#botonesRutas {
+  text-align: right;
+  padding-right: 10px;
+  display: flex;
+}
+
+#formulario{
+  padding-top: 50px;
+  margin-top: 60px;
+}
+
+#formularioFelicitar {
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(57, 169, 0);
+}
+
+h2 {
+  margin-left: 625px;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+  border-bottom: 2px solid black;
+  display: inline-block;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.cuadro{
+  border-radius: 5px;
+}
+
+.este{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1px;
+}
+
+*/
